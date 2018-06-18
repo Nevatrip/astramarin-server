@@ -1,0 +1,33 @@
+parserOptions:
+  sourceType: module
+  ecmaVersion: 8
+  ecmaFeatures:
+    experimentalObjectRestSpread: true
+
+plugins:
+  - bem-xjst
+  /* - prettier */
+
+env:
+  browser: true
+  node: true
+  es6: true
+  bem-xjst/bemhtml: true
+  bem-xjst/bemtree: true
+
+globals:
+  # YModules
+  modules: false
+
+rules:
+  curly:
+    - error
+    - multi-line
+  /* prettier/prettier: error */
+  space-in-parens:
+    - error
+    - always
+
+extends:
+  - pedant
+  /* - plugin:prettier/recommended */
